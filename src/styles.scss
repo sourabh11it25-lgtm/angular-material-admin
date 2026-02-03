@@ -1,19 +1,32 @@
 @use '@angular/material' as mat;
-@use '../m3-theme' as theme;
+@use '../m3-theme' as theme; // Check if your path is ../ or ./
 
 @include mat.core();
 
+// Apply light theme by default to everything
 html {
-  // Apply the light theme by default
   @include mat.all-component-themes(theme.$light-theme);
+  @include mat.system-level-typography(theme.$light-theme);
 }
 
-// Optional: Admin Dark Mode
-.dark-admin-theme {
-  @include mat.all-component-themes(theme.$dark-theme);
-}
+// Global reset to make the background change
 body {
   margin: 0;
   height: 100%;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, sans-serif;
+  transition: background-color 0.3s ease; // Smooth theme switch
+}
+
+// The DARK THEME logic
+.dark-theme {
+  @include mat.all-component-colors(theme.$dark-theme);
+  
+  // This specific line ensures the page background turns dark
+  background-color: #000a46; 
+  color: #e6e1e3;
+
+  // Fix for Material components that don't auto-update
+  .mat-drawer-container, .mat-sidenav {
+    background-color: #001365 !important; // A slightly lighter dark for contrast
+  }
 }

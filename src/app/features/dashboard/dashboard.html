@@ -1,0 +1,54 @@
+<div class="dashboard-wrapper">
+    <!-- @if (totalUsers() > 0) { -->
+        <!-- <div class="stat-grid"> -->
+            <!-- Card 1 -->
+            <!-- <mat-card class="stat-card primary">
+                <mat-card-header>
+                    <mat-icon mat-card-avatar>person</mat-icon>
+                    <mat-card-title>Total Users</mat-card-title>
+                    <mat-card-subtitle>1,245</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card> -->
+        
+
+           
+    <!-- } -->
+    @if (totalUsers() > 0) {
+        <div class="stat-grid">
+        <!-- Your Cards Here -->
+            <mat-card class="stat-card primary">
+                <mat-card-header>
+                <mat-icon mat-card-avatar>person</mat-icon>
+                <mat-card-title>Total Users</mat-card-title>
+                <mat-card-subtitle>{{ totalUsers() }}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+
+            <!-- Card 2 -->
+            <mat-card class="stat-card accent">
+                <mat-card-header>
+                    <mat-icon mat-card-avatar>shopping_cart</mat-icon>
+                    <mat-card-title>Sales</mat-card-title>
+                    <mat-card-subtitle>+12% today</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+         
+    } 
+    <mat-card class="chart-card">
+    <mat-card-header>
+      <mat-card-title>Weekly Sales Report</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="bar-chart">
+        <!-- START FOR -->
+        @for (data of weeklySales(); track data.day) {
+          <div class="bar-container">
+            <div class="bar" [style.height.%]="data.value"></div>
+            <span class="day-label">{{data.day}}</span>
+          </div>
+        } <!-- END FOR -->
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
