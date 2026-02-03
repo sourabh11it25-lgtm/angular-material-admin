@@ -1,0 +1,41 @@
+.admin-container {
+  height: 100vh;
+  background-color: #fbf8ff; // Your neutral background
+}
+
+.admin-sidebar {
+  width: 260px;
+  background-color: #ffffff; // Pure white sidebar for contrast
+  border-right: 1px solid #dee0ff; // Using your 'neutral 90' for the border
+}
+
+.mat-toolbar {
+  // This uses the amber/gold primary color you generated (#805600)
+  // to make the header pop against the light background
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+}
+
+.admin-content {
+  padding: 24px;
+}
+
+.mat-mdc-list-item.active {
+  background-color: rgba(128, 86, 0, 0.1); // Light version of your amber primary
+  color: #805600; // Your primary color
+  
+  mat-icon {
+    color: #805600;
+  }
+}
+
+.mat-sidenav-content {
+  transition: margin-left 0.3s ease-in-out;
+}
+.active-link {
+  background-color: rgba(128, 86, 0, 0.08) !important; // Light amber tint
+  color: #805600 !important; // Your primary amber
+  
+  mat-icon {
+    color: #805600 !important;
+  }
+}
