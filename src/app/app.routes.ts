@@ -19,8 +19,13 @@ export const routes: Routes = [
                 path: 'users', 
                 loadComponent: () => import('./features/users/users').then(m => m.Users) 
             },
-            { path: 'settings', 
+            { 
+                path: 'settings', 
                 loadComponent: () => import('./features/settings/settings').then(m => m.Settings)
+            },
+            { 
+                path: 'component-show', 
+                loadComponent: () => import('./features/components-show/components-show').then(m => m.ComponentsShow)
             }
 
         ]

@@ -1,0 +1,18 @@
+<form (submit)="onSubmit($event)">
+  @for (field of config(); track field.name) {
+    <mat-form-field appearance="outline" style="width: 100%">
+      <mat-label>{{ field.label }}</mat-label>
+      
+      <input matInput [formField]="getField(field.name)" [type]="field.type">
+
+      @if (getField(field.name).touched() && getField(field.name).invalid()) {
+        <mat-error>Invalid {{ field.label }}</mat-error>
+      }
+    </mat-form-field>
+  }
+
+  <!-- Use the 'f' getter here -->
+  <button mat-flat-button color="primary" [disabled]="!f.valid()">
+    Save User
+  </button>
+</form>

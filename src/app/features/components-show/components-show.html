@@ -1,0 +1,50 @@
+<div class="dashboard-wrapper">
+  <!-- 1. Stats Cards -->
+  <div class="stat-grid">
+    @for (card of config()?.statCards; track card.title) {
+      <app-stat-card 
+        [title]="card.title" 
+        [value]="card.value" 
+        [icon]="card.icon" 
+        [themeColor]="card.themeColor">
+      </app-stat-card>
+    }
+  </div>
+
+  <!-- 2. Action Buttons Bar -->
+  <div class="action-bar" style="margin: 20px 0; display: flex; gap: 10px;">
+    @for (btn of config()?.actionButtons; track btn.label) {
+      <app-button 
+        [label]="btn.label" 
+        [icon]="btn.icon" 
+        [color]="btn.color"
+        (btnClick)="handleAction(btn.id)">
+      </app-button>
+    }
+  </div>
+
+  <!-- 3. Dynamic Form Section -->
+  <mat-card style="margin-bottom: 20px; padding: 20px;">
+    <h3>Quick Edit</h3>
+    <form [formGroup]="form" class="dynamic-form-grid">
+      @for (field of config()?.formFields; track field.name) {
+        <app-input-field 
+          [label]="field.label" 
+          [type]="field.type" 
+          [controlName]="field.name" 
+          [group]="form">
+        </app-input-field>
+      }
+    </form>
+  </mat-card>
+
+  
+  <!-- 4. Data Table -->
+  @if (config()?.userTable) {
+    <app-table 
+      [columns]="config()?.userTable.columns" 
+      [data]="config()?.userTable.data">
+    </app-table>
+  }
+</div>
+

@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>
+    {{ data ? 'Edit User' : 'Add New User' }}
+</h2>
+
+<mat-dialog-content>
+  <!-- Added dialog-form class for spacing -->
+  <form [formGroup]="userForm" class="dialog-form">
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Full Name</mat-label>
+      <input matInput formControlName="name" placeholder="John Doe">
+      <mat-error *ngIf="userForm.get('name')?.hasError('required')">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Email Address</mat-label>
+      <input matInput formControlName="email" type="email" placeholder="john@example.com">
+      <mat-error *ngIf="userForm.get('email')?.hasError('email')">
+        Please enter a valid email
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>User Role</mat-label>
+        <mat-select formControlName="role">
+            <mat-option value="Admin">Admin</mat-option>
+            <mat-option value="Editor">Editor</mat-option>
+            <mat-option value="User">User</mat-option>
+        </mat-select>
+        <mat-error *ngIf="userForm.get('role')?.hasError('required')">
+            Role is required
+        </mat-error>
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!-- Button only enables when all 3 fields are valid -->
+  <button mat-flat-button color="primary" [disabled]="!userForm.valid" (click)="save()" [mat-dialog-close]="true">
+    {{ data ? 'Update User' : 'Save User' }}
+  </button>
+</mat-dialog-actions>

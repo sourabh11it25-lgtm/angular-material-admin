@@ -1,0 +1,11 @@
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  min-width: 350px; // Ensures dialog has a nice width
+}
+
+.full-width {
+  width: 100%;
+}
