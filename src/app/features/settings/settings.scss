@@ -1,0 +1,33 @@
+.settings-container {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.settings-card {
+  width: 100%;
+  max-width: 600px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.section-title {
+  margin: 16px 0 8px 0;
+  font-weight: 500;
+}
+
+.save-btn {
+  padding: 24px;
+  align-self: flex-end;
+}

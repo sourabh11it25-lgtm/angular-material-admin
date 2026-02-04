@@ -1,0 +1,23 @@
+[
+  {
+    "name": "fullName",
+    "label": "Full Name",
+    "type": "text",
+    "validators": { "required": true, "minLength": 3 }
+  },
+  {
+    "name": "email",
+    "label": "Email Address",
+    "type": "email",
+    "validators": { "required": true, "email": true }
+  },
+  {
+    "name": "role",
+    "label": "User Role",
+    "type": "select",
+    "options": ["Admin", "Editor", "User"],
+    "validators": { "required": true }
+  }
+]
+
+

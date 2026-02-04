@@ -1,0 +1,58 @@
+{
+  "statCards": [
+    {
+      "title": "Total Users",
+      "value": "1,245",
+      "icon": "people",
+      "themeColor": "primary",
+      "trend": "12%",
+      "trendPositive": true
+    },
+    {
+      "title": "Monthly Revenue",
+      "value": "$45,200",
+      "icon": "payments",
+      "themeColor": "accent",
+      "trend": "8%",
+      "trendPositive": true
+    },
+    {
+      "title": "System Alerts",
+      "value": "3",
+      "icon": "warning",
+      "themeColor": "warn",
+      "trend": "2%",
+      "trendPositive": false
+    }
+  ],
+  "userTable": {
+    "columns": [
+      { "key": "id", "label": "ID" },
+      { "key": "name", "label": "Full Name" },
+      { "key": "email", "label": "Email Address" },
+      { "key": "role", "label": "User Role" }
+    ],
+    "data": [
+      { "id": 1, "name": "John Doe", "email": "john@example.com", "role": "Admin" },
+      { "id": 2, "name": "Jane Smith", "email": "jane@example.com", "role": "Editor" },
+      { "id": 3, "name": "Bob Wilson", "email": "bob@example.com", "role": "User" },
+       { "id": 1, "name": "John Doe", "email": "john@example.com", "role": "Admin" },
+      { "id": 2, "name": "Jane Smith", "email": "jane@example.com", "role": "Editor" },
+      { "id": 3, "name": "Bob Wilson", "email": "bob@example.com", "role": "User" },
+       { "id": 1, "name": "John Doe", "email": "john@example.com", "role": "Admin" },
+      { "id": 2, "name": "Jane Smith", "email": "jane@example.com", "role": "Editor" },
+      { "id": 3, "name": "Bob Wilson", "email": "bob@example.com", "role": "User" }
+    ]
+  },
+  "actionButtons": [
+    { "label": "Add User", "icon": "add", "color": "primary", "id": "btn-add" },
+    { "label": "Export PDF", "icon": "download", "color": "accent", "id": "btn-export" },
+    { "label": "Delete All", "icon": "delete", "color": "warn", "id": "btn-delete" }
+  ],
+  "formFields": [
+    { "name": "firstName", "label": "First Name", "type": "text" },
+    { "name": "lastName", "label": "Last Name", "type": "text" },
+    { "name": "email", "label": "Email", "type": "email" },
+    { "name": "password", "label": "Password", "type": "password" }
+  ]
+}

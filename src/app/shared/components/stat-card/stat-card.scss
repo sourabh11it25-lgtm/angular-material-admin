@@ -1,0 +1,24 @@
+.stat-card {
+      padding: 16px;
+      border-left: 5px solid transparent;
+      transition: transform 0.2s ease;
+      &:hover { transform: translateY(-5px); }
+    }
+    .primary { border-left-color: #805600; .icon-container { color: #805600; } }
+    .accent { border-left-color: #536DFE; .icon-container { color: #536DFE; } }
+    .warn { border-left-color: #ff4081; .icon-container { color: #ff4081; } }
+
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.03);
+      border-radius: 50%;
+    }
+    .trend-footer {
+      padding: 0 16px 12px;
+      font-size: 12px;
+      .up { color: green; font-weight: bold; }
+      .down { color: red; font-weight: bold; }
+      .since { color: gray; margin-left: 5px; }
+    }

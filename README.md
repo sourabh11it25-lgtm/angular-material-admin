@@ -1,59 +1,32 @@
-# MyModernAdmin
+#  Modern Admin Dashboard (Angular 21)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+A high-performance, **Zoneless** admin template built with **Angular 21**, **Material 3**, and **Signals**. This project utilizes a dynamic JSON-driven architecture to minimize boilerplate and maximize rendering speed on low-resource systems.
 
-## Development server
+##  2026 Tech Stack
+- **Framework**: [Angular 21](https://angular.dev) (Zoneless by Default)
+- **UI Library**: [Angular Material 3](https://material.angular.io) (Amber/Gold Palette)
+- **State Management**: [Angular Signals](https://angular.devguide/signals)
+- **Build Engine**: [esbuild](https://esbuild.github.io) (Blazing fast compilation)
+- **Styling**: SCSS with Material 3 Design Tokens (CSS Variables)
 
-To start a local development server, run:
+##  Features
+- **Dynamic UI Engine**: Stats cards, buttons, tables, and forms are generated via `public/data/admin-config.json`.
+- **Theme Engine**: Seamless Light/Dark mode toggling with persisted user preference.
+- **Optimized Routing**: Protected admin routes with **Lazy Loading** and **Auth Guards**.
+- **Modern Control Flow**: Uses `@if`, `@for`, and `@switch` for high-performance DOM manipulation.
+- **Low-Latency UX**: Ripple effects and complex animations optimized for slower hardware.
 
-```bash
-ng serve
-```
+##  Folder Structure
+- `public/data/`: JSON configuration files for the UI.
+- `src/app/core/`: Singleton services (Auth, Theme, Config Service).
+- `src/app/shared/`: Atomic UI components (Shared Buttons, Inputs, Tables).
+- `src/app/layout/`: The Shell component (Sidenav + Toolbar).
+- `src/app/features/`: Lazy-loaded business modules (Dashboard, Users, Settings).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+##  Quick Start
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Clone & Install**:
+   ```bash
+   git clone https://github.com/sourabh11it25-lgtm/angular-material-admin.git
+   cd angular-material-admin
+   npm install

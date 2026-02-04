@@ -1,0 +1,4 @@
+<button mat-flat-button [color]="color" [disabled]="disabled" (click)="btnClick.emit($event)">
+    @if (icon) { <mat-icon>{{icon}}</mat-icon> }
+    {{ label }}
+</button>
