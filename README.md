@@ -1,5 +1,5 @@
 #  Modern Admin Dashboard (Angular 21)
-
+live url link https://admin-6308a.web.app
 A high-performance, **Zoneless** admin template built with **Angular 21**, **Material 3**, and **Signals**. This project utilizes a dynamic JSON-driven architecture to minimize boilerplate and maximize rendering speed on low-resource systems.
 
 ##  2026 Tech Stack
